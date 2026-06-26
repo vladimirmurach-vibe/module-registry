@@ -1,0 +1,14 @@
+module:
+  id: fastapi-base
+  name: Базовое FastAPI приложение
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Базовое FastAPI приложение с CORS, логгированием, /health и /docs.
+  capabilities:
+    - Готовый FastAPI сервер
+    - CORS, логгирование, документация
+  constraints:
+    - Python 3.10+, FastAPI 0.100+
+  version: 1.0.0
+  source: local-registry

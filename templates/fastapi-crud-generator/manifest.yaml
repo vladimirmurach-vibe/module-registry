@@ -1,0 +1,12 @@
+module:
+  id: fastapi-crud-generator
+  name: Генератор CRUD эндпоинтов
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Генератор CRUD эндпоинтов по Pydantic модели.
+  capabilities:
+    - Автоматическая генерация CRUD API
+  constraints: []
+  version: 1.0.0
+  source: local-registry

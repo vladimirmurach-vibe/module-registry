@@ -1,0 +1,14 @@
+module:
+  id: csv-data-source
+  name: Коннектор для CSV
+  type: connector
+  maturity: production
+  owner: Архитектор
+  description: Коннектор для чтения/записи CSV.
+  capabilities:
+    - Чтение CSV (pandas)
+    - Валидация колонок
+  constraints:
+    - Использует pandas
+  version: 1.0.0
+  source: local-registry

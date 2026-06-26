@@ -1,0 +1,13 @@
+module:
+  id: auth-jwt
+  name: JWT аутентификация
+  type: black_box
+  maturity: production
+  owner: Архитектор
+  description: Модуль JWT аутентификации (login, refresh, verify).
+  capabilities:
+    - Выдача и валидация JWT
+  constraints:
+    - Требует секретного ключа
+  version: 1.0.0
+  source: local-registry

@@ -1,0 +1,12 @@
+module:
+  id: clean-architecture-pattern
+  name: Чистая архитектура
+  type: methodology
+  maturity: production
+  owner: Архитектор
+  description: Описание паттерна чистая архитектура с разбивкой на слои.
+  capabilities:
+    - Руководство по организации кода
+  constraints: []
+  version: 1.0.0
+  source: local-registry

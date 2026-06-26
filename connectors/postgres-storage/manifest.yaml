@@ -1,0 +1,14 @@
+module:
+  id: postgres-storage
+  name: Хранилище PostgreSQL
+  type: connector
+  maturity: production
+  owner: Архитектор
+  description: Шаблон работы с PostgreSQL (SQLAlchemy, Alembic).
+  capabilities:
+    - Модели, миграции, репозиторий
+    - Оптимизация агрегаций
+  constraints:
+    - PostgreSQL 14+
+  version: 1.0.0
+  source: local-registry

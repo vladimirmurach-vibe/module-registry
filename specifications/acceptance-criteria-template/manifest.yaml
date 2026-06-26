@@ -1,0 +1,12 @@
+module:
+  id: acceptance-criteria-template
+  name: Шаблон приёмочных критериев (Gherkin)
+  type: specification
+  maturity: production
+  owner: Архитектор
+  description: Шаблон Gherkin-подобных сценариев.
+  capabilities:
+    - Формат Gherkin для приёмочных тестов
+  constraints: []
+  version: 1.0.0
+  source: local-registry

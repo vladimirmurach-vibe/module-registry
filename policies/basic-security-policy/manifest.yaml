@@ -1,0 +1,12 @@
+module:
+  id: basic-security-policy
+  name: Базовая политика безопасности
+  type: policy
+  maturity: production
+  owner: Архитектор
+  description: "Правила: обязательный JWT, HTTPS, запрет хардкода."
+  capabilities:
+    - Правила безопасности в YAML
+  constraints: []
+  version: 1.0.0
+  source: local-registry

@@ -1,0 +1,12 @@
+module:
+  id: openapi-spec-template
+  name: Шаблон OpenAPI спецификации
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Шаблон OpenAPI документации.
+  capabilities:
+    - Базовая OpenAPI спецификация
+  constraints: []
+  version: 1.0.0
+  source: local-registry

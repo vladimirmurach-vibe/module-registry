@@ -1,0 +1,15 @@
+module:
+  id: react-dashboard-template
+  name: Шаблон React-приложения с дашбордом
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Шаблон React-приложения с роутингом, базовой темой, подключением к REST API.
+  capabilities:
+    - Быстрый старт React-проекта
+    - Интеграция с REST API (axios)
+    - Роутинг (React Router)
+  constraints:
+    - React 18+, React Router v6
+  version: 1.0.0
+  source: local-registry

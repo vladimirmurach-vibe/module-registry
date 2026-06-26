@@ -1,0 +1,12 @@
+module:
+  id: pytest-unit-tests
+  name: Юнит-тесты (pytest + Jest)
+  type: test_pack
+  maturity: production
+  owner: Архитектор
+  description: Шаблоны юнит-тестов для FastAPI и React.
+  capabilities:
+    - Тесты для FastAPI и React
+  constraints: []
+  version: 1.0.0
+  source: local-registry

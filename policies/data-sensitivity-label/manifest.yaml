@@ -1,0 +1,12 @@
+module:
+  id: data-sensitivity-label
+  name: Метки чувствительности данных
+  type: policy
+  maturity: production
+  owner: Архитектор
+  description: "Метки: публичные, внутренние, конфиденциальные."
+  capabilities:
+    - Классификация данных
+  constraints: []
+  version: 1.0.0
+  source: local-registry

@@ -1,0 +1,14 @@
+module:
+  id: react-crud-pages
+  name: Шаблон CRUD-страниц
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Шаблон страниц для CRUD с React Hook Form и таблицей.
+  capabilities:
+    - Генерация CRUD-страниц
+    - Интеграция с React Hook Form
+  constraints:
+    - Требует react-hook-form
+  version: 1.0.0
+  source: local-registry

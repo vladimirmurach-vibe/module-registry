@@ -1,0 +1,12 @@
+module:
+  id: readme-template
+  name: Шаблон README
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Базовый README для solution package.
+  capabilities:
+    - Структура README
+  constraints: []
+  version: 1.0.0
+  source: local-registry
