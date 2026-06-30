@@ -1,0 +1,22 @@
+module:
+  id: consensus-calculator
+  name: Калькулятор консенсус-прогноза
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Вычисляет консенсус-прогноз как сумму базового прогноза и корректировки. Обеспечивает согласованность сумм на всех уровнях агрегации.
+  capabilities:
+    - Мгновенный пересчёт consensus = base + adjustment
+    - Аудит согласованности (сумма детальных значений равна агрегированному)
+    - Обновление поля consensus_forecast
+  constraints: []
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - postgres-storage
+  interfaces:
+    - class: ConsensusService
+      methods:
+        - calculate_for_record
+        - recalc_for_forecast_fact
+        - audit_consistency

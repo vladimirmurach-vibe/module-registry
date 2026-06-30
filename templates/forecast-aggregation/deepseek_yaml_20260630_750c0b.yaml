@@ -1,0 +1,23 @@
+module:
+  id: forecast-aggregation
+  name: Агрегатор прогнозов по иерархиям
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Динамическая агрегация данных прогноза по уровням иерархий (Товар, Локация, Период). Предоставляет сервис для группировки, суммирования и фильтрации.
+  capabilities:
+    - Группировка по выбранным уровням строк и столбцов
+    - Суммирование показателей (base_forecast, adjustment, consensus_forecast)
+    - Применение фильтров по измерениям
+    - Поддержка пагинации и сортировки
+  constraints:
+    - Требует PostgreSQL 14+
+    - Использует SQLAlchemy Core
+    - Время выполнения ≤ 3 сек при 100 000 записей
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - postgres-storage
+  interfaces:
+    - class: AggregationService
+      method: aggregate

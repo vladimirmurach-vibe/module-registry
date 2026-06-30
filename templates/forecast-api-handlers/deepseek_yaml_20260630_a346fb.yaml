@@ -1,0 +1,25 @@
+module:
+  id: forecast-api-handlers
+  name: Обработчики API прогноза
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Реализует REST API эндпоинты для загрузки прогноза, получения сводной таблицы, сохранения корректировок, экспорта. Интегрирует все бизнес-модули.
+  capabilities:
+    - Загрузка CSV-файла (POST /api/upload)
+    - Получение агрегированной таблицы (POST /api/pivot)
+    - Сохранение корректировки с дезагрегацией (POST /api/adjustment)
+    - Экспорт в CSV (GET /api/export)
+  constraints:
+    - Требует fastapi-base, auth-jwt, csv-data-source, postgres-storage
+    - Интегрируется с forecast-aggregation, adjustment-disaggregation, consensus-calculator
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - fastapi-base
+    - auth-jwt
+    - csv-data-source
+    - postgres-storage
+    - forecast-aggregation
+    - adjustment-disaggregation
+    - consensus-calculator

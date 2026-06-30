@@ -1,0 +1,26 @@
+module:
+  id: forecast-ui-pivot
+  name: Компонент сводной таблицы прогноза
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: React-компонент интерактивной сводной таблицы с настройкой строк, столбцов, фильтров, отображением трёх показателей, редактированием корректировки, диалогами подтверждения, экспортом, сохранением представлений и поддержкой клавиатуры.
+  capabilities:
+    - Настройка строк, столбцов, фильтров (drag & drop)
+    - Отображение трёх показателей с разными стилями
+    - Inline-редактирование корректировки (валидация, Enter/Tab/Esc)
+    - Модальные диалоги подтверждения дезагрегации
+    - Экспорт в CSV через API
+    - Сохранение/загрузка представлений (localStorage)
+    - Отмена последнего действия (Ctrl+Z)
+    - Клавиатурная навигация (WCAG 2.1 AA)
+  constraints:
+    - React 18+, TypeScript
+    - ag-grid-react (или react-table)
+    - axios для API-вызовов
+    - Интегрируется с react-dashboard-template, react-crud-pages
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - react-dashboard-template
+    - react-crud-pages

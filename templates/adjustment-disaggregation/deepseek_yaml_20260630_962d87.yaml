@@ -1,0 +1,22 @@
+module:
+  id: adjustment-disaggregation
+  name: Дезагрегатор корректировок
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: Распределение корректировки, введённой на агрегированном уровне, на детальные записи SKU × Магазин × Неделя. Правило: пропорционально базовому прогнозу или равномерно при нуле.
+  capabilities:
+    - Вычисление коэффициентов распределения
+    - Массовое обновление записей в транзакции
+    - Поддержка транзакционной целостности
+  constraints:
+    - PostgreSQL 14+
+    - Время выполнения ≤ 1 сек при 100 000 записей
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - postgres-storage
+    - forecast-aggregation
+  interfaces:
+    - class: DisaggregationService
+      method: disaggregate
