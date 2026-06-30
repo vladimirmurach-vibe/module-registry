@@ -1,0 +1,21 @@
+module:
+  id: forecast-chart
+  name: Компонент графика прогноза
+  type: template
+  maturity: production
+  owner: Архитектор
+  description: React-компонент для отображения графика (линейного или столбчатого) на основе агрегированных данных прогноза.
+  capabilities:
+    - Отображение линейного/столбчатого графика
+    - Выбор показателей (base, adjustment, consensus)
+    - Группировка по времени, товарам, локациям
+    - Автообновление при изменении данных
+    - Экспорт в PNG
+  constraints:
+    - React 18+, Chart.js 4+, react-chartjs-2
+    - Интегрируется с forecast-api-handlers
+  version: 1.0.0
+  source: local-registry
+  dependencies:
+    - react-dashboard-template
+    - forecast-api-handlers

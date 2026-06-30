@@ -1,0 +1,58 @@
+.forecast-chart-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.chart-config {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.chart-config-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.chart-config-label {
+  font-weight: 600;
+}
+
+.chart-config label {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.chart-config select {
+  margin-left: 6px;
+  padding: 4px 8px;
+}
+
+.chart-export-btn {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.chart-wrapper {
+  height: 300px;
+  position: relative;
+}
+
+.chart-loading {
+  text-align: center;
+  padding: 50px;
+  color: #888;
+}

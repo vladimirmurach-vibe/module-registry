@@ -1,0 +1,15 @@
+{
+  "name": "forecast-chart",
+  "version": "1.0.0",
+  "description": "React component for forecast chart",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "axios": "^1.6.0"
+  }
+}
