@@ -1,0 +1,52 @@
+module:
+  id: mod-chart-d3
+  name: D3.js
+  type: source_code
+  maturity: production
+  owner: Mike Bostock
+
+  description:
+    summary: Гибкая библиотека для построения произвольных визуализаций с полным контролем над элементами.
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Кастомные графики для демонстрации дезагрегации"
+        - "Иерархические диаграммы (sunburst, treemap)"
+
+  capabilities:
+    - "Построение любых SVG-графиков"
+    - "Привязка данных и анимация переходов"
+    - "Сложные иерархические структуры (pack, partition)"
+    - "Интерактивность (zoom, pan, brush)"
+
+  interfaces:
+    inputs:
+      - "Данные в формате, необходимом для выбранного типа графика"
+    outputs:
+      - "Отрисованный SVG-элемент"
+
+  contracts:
+    consumes:
+      - "Массив данных или иерархический объект"
+    produces:
+      - "Визуализация в формате SVG"
+
+  constraints:
+    requires: "Vanilla JS"
+    license: "BSD-3-Clause"
+    learning_curve: "Высокий порог входа"
+
+  generation:
+    templates:
+      - "Код для построения конкретного графика с использованием D3"
+    instructions:
+      - "Написать функцию, создающую SVG-график, с учётом масштабирования и переходов."
+
+  matching:
+    keywords: ["d3", "custom chart", "svg", "hierarchy", "animation"]
+    preferred_when:
+      - "Требуется уникальный или нестандартный график"
+      - "Команда имеет опыт работы с D3"
+    avoid_when:
+      - "Нужно быстрое решение с готовыми компонентами"
+      - "Проект требует минимального кода"

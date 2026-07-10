@@ -1,0 +1,53 @@
+module:
+  id: mod-chart-vega
+  name: Vega-Lite
+  type: source_code
+  maturity: production
+  owner: UW Interactive Data Lab
+
+  description:
+    summary: Декларативный язык для описания визуализаций. Генерирует SVG/Canvas на основе JSON-спецификаций.
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Быстрая смена графиков"
+        - "Автоматическая агрегация данных на лету"
+
+  capabilities:
+    - "Декларативное описание графиков (JSON)"
+    - "Автоматическая агрегация (count, sum, mean и др.)"
+    - "Интерактивность (селекты, фильтры, zoom)"
+    - "Интеграция с React/Vue через обёртки"
+    - "Экспорт в PNG/SVG"
+
+  interfaces:
+    inputs:
+      - "Набор данных (массив объектов)"
+      - "Спецификация Vega-Lite"
+    outputs:
+      - "График (SVG или Canvas)"
+
+  contracts:
+    consumes:
+      - "Любые данные в формате таблицы"
+    produces:
+      - "Визуализация в соответствии со спецификацией"
+
+  constraints:
+    requires: "Vanilla JS (есть React-обёртка)"
+    license: "BSD-3-Clause"
+    performance: "Хорошо работает с тысячами записей"
+
+  generation:
+    templates:
+      - "Обёртка для Vega-Embed"
+    instructions:
+      - "Создать спецификацию Vega-Lite на основе переданных данных и конфигурации, затем внедрить через Vega-Embed."
+
+  matching:
+    keywords: ["vega", "vega-lite", "declarative", "visualization", "grammar"]
+    preferred_when:
+      - "Требуется быстрое переключение между типами графиков"
+      - "Команда знакома с грамматикой Vega"
+    avoid_when:
+      - "Нужны очень кастомные нестандартные графики (Vega ограничен спецификацией)"

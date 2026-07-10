@@ -1,0 +1,54 @@
+module:
+  id: mod-chart-chartjs
+  name: Chart.js
+  type: source_code
+  maturity: production
+  owner: Chart.js Team
+
+  description:
+    summary: Простая и лёгкая библиотека для основных типов графиков (бар, линия, круг, радар).
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Визуализация динамики консенсус-прогноза по периодам"
+        - "Сравнение базового прогноза и скорректированного в разрезе категорий"
+
+  capabilities:
+    - "Быстрый рендеринг (Canvas)"
+    - "Анимация"
+    - "Плагины (подписи, индикаторы загрузки)"
+    - "Понятный API"
+    - "Адаптивность"
+
+  interfaces:
+    inputs:
+      - "Данные (labels, datasets)"
+      - "Параметры конфигурации"
+    outputs:
+      - "График в Canvas"
+
+  contracts:
+    consumes:
+      - "Массивы меток и значений"
+    produces:
+      - "Визуализация (лента, столбцы, круги)"
+
+  constraints:
+    requires: "Vanilla JS (есть обёртки для React/Vue)"
+    license: "MIT"
+    performance: "Рекомендуется для до 1000 точек"
+
+  generation:
+    templates:
+      - "Компонент для Chart.js"
+    instructions:
+      - "Создать график Chart.js с заданными данными и опциями."
+
+  matching:
+    keywords: ["chartjs", "simple", "bar", "line", "pie", "canvas"]
+    preferred_when:
+      - "Нужны простые и стандартные графики"
+      - "Важен малый размер и быстрая загрузка"
+    avoid_when:
+      - "Требуются сложные иерархические визуализации"
+      - "Необходима агрегация данных на стороне клиента"

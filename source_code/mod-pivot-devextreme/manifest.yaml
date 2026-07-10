@@ -1,0 +1,57 @@
+module:
+  id: mod-pivot-devextreme
+  name: DevExtreme PivotGrid
+  type: source_code
+  maturity: production
+  owner: DevExpress
+
+  description:
+    summary: Готовый pivot-компонент с мощным API для настройки измерений, мер, фильтров и агрегаций.
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Сложная сводка с иерархиями"
+        - "Динамическое перестроение таблицы"
+
+  capabilities:
+    - "Drag-and-drop для полей"
+    - "Иерархические оси строк и столбцов"
+    - "Возможность редактирования значений мер (требует кастомизации)"
+    - "Встроенные итоги"
+    - "Экспорт в Excel"
+    - "Интеграция с React/Vue/Angular"
+
+  interfaces:
+    inputs:
+      - "Набор данных"
+      - "Структура полей (строки, столбцы, фильтры, меры)"
+    outputs:
+      - "Рендеринг PivotGrid"
+      - "События изменения, экспорт"
+
+  contracts:
+    consumes:
+      - "Данные с измерениями и мерами"
+    produces:
+      - "Агрегированные значения, сгруппированные по осям"
+
+  constraints:
+    requires: "React/Vue/Angular (или jQuery)"
+    license: "Commercial (DevExpress лицензия)"
+    performance: "Способен обрабатывать десятки тысяч записей"
+
+  generation:
+    templates:
+      - "Компонент PivotGrid с конфигурацией"
+    instructions:
+      - "Настроить DevExtreme PivotGrid с указанием полей и агрегаций."
+      - "Добавить обработчики для кастомизации редактирования ячеек (если требуется)."
+
+  matching:
+    keywords: ["devextreme", "pivotgrid", "devExpress", "react", "angular", "vue"]
+    preferred_when:
+      - "Проект уже использует DevExtreme"
+      - "Требуется полностью готовый компонент без доработок"
+    avoid_when:
+      - "Бюджет ограничен (лицензия платная)"
+      - "Необходимо редактирование ячеек «из коробки» (придётся допиливать)"

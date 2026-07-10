@@ -1,0 +1,55 @@
+module:
+  id: mod-pivot-jquery-pivottable
+  name: PivotTable.js (jQuery)
+  type: source_code
+  maturity: draft
+  owner: Nicolas Kruchten
+
+  description:
+    summary: Простая библиотека для построения pivot-таблиц на основе данных в формате массива объектов.
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Прототипирование сводной таблицы"
+        - "Базовая агрегация для демонстрации"
+
+  capabilities:
+    - "Сводка с выбором строк, столбцов и фильтров"
+    - "Агрегация (сумма, счётчик)"
+    - "Кастомизация рендеринга через колбэки"
+    - "Бесплатность и простота использования"
+
+  interfaces:
+    inputs:
+      - "Данные (массив объектов)"
+      - "Конфигурация строк, столбцов, фильтров, агрегатора"
+    outputs:
+      - "Сгенерированная таблица HTML (через jQuery)"
+
+  contracts:
+    consumes:
+      - "Плоские данные с ключами"
+    produces:
+      - "Сводная таблица в виде DOM-элемента"
+
+  constraints:
+    requires: "jQuery"
+    license: "MIT"
+    performance: "Подходит только для небольших датасетов (<10k записей)"
+    maintenance: "Проект не активно поддерживается"
+
+  generation:
+    templates:
+      - "Скрипт инициализации PivotTable"
+    instructions:
+      - "Подключить PivotTable.js и создать сводку на основе данных."
+      - "Настроить renderers для кастомизации внешнего вида."
+
+  matching:
+    keywords: ["pivottable", "jquery", "simple", "prototype"]
+    preferred_when:
+      - "Требуется быстрый прототип"
+      - "Проект на jQuery и не предполагается масштабирование"
+    avoid_when:
+      - "Нужно редактирование ячеек (библиотека не поддерживает)"
+      - "Сложные иерархии (только плоские измерения)"

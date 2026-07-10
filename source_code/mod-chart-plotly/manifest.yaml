@@ -1,0 +1,52 @@
+module:
+  id: mod-chart-plotly
+  name: Plotly.js
+  type: source_code
+  maturity: production
+  owner: Plotly Technologies
+
+  description:
+    summary: Библиотека с широким набором графиков (2D и 3D), интерактивностью (zoom, pan, hover) и экспортом.
+    business_context:
+      domains: ["planning", "forecast", "analytics"]
+      use_cases:
+        - "Сравнение базового прогноза и консенсуса"
+        - "Отображение сумм корректировок по регионам"
+
+  capabilities:
+    - "Множество типов графиков (scatter, bar, line, heatmap, 3D)"
+    - "Интерактивность (zoom, pan, hover, selection)"
+    - "Обновление данных через restyle/relayout"
+    - "Поддержка нескольких осей"
+    - "Экспорт в PNG, SVG, и другие форматы"
+
+  interfaces:
+    inputs:
+      - "Данные (trace) и layout"
+    outputs:
+      - "График в контейнере"
+
+  contracts:
+    consumes:
+      - "Массивы данных для осей"
+    produces:
+      - "Визуализация с интерактивными элементами"
+
+  constraints:
+    requires: "Vanilla JS (есть React-обёртка)"
+    license: "MIT (бесплатно)"
+    performance: "Может быть тяжёлым при >10k точек"
+
+  generation:
+    templates:
+      - "Компонент для создания графика Plotly"
+    instructions:
+      - "Настроить Plotly с данными и параметрами отображения."
+
+  matching:
+    keywords: ["plotly", "interactive", "3D", "heatmap", "statistical"]
+    preferred_when:
+      - "Нужна интерактивность (zoom, pan)"
+      - "Требуются 3D-графики или тепловые карты"
+    avoid_when:
+      - "Проект требует максимальной производительности при больших данных"
